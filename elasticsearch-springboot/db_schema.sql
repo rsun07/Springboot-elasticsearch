@@ -5,6 +5,6 @@ CREATE TABLE `blog` (
   `content` text(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `index_author_name` (`author`),
+  KEY `index_author_name` (`author`),
   KEY `index_blog_title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
