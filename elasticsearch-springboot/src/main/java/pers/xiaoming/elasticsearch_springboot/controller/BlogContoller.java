@@ -4,6 +4,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import pers.xiaoming.elasticsearch_springboot.exception.ResourceNotFoundException;
 import pers.xiaoming.elasticsearch_springboot.model.MyBlog;
 import pers.xiaoming.elasticsearch_springboot.service.BlogService;
 
@@ -23,7 +24,11 @@ public class BlogContoller {
 
     @RequestMapping(method = RequestMethod.GET)
     public MyBlog get(@Param("id") int id) {
-        return service.getBlog(id);
+        MyBlog blog = service.getBlog(id);
+        if (blog == null) {
+            throw new ResourceNotFoundException();
+        }
+        return blog;
     }
 
     @RequestMapping(value = "/range", method = RequestMethod.GET)
