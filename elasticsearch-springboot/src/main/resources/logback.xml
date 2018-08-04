@@ -11,7 +11,7 @@
 
     <logger name="pers.xiaoming.elasticsearch_springboot" level="DEBUG"/>
     <logger name="org.springframework" level="DEBUG"/>
-    <logger name="org.mybatis" level="INFO"/>
+    <logger name="org.mybatis" level="DEBUG"/>
 
     <root level="DEBUG">
         <appender-ref ref="STDOUT" />

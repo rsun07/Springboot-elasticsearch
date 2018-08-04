@@ -1,5 +1,6 @@
 package pers.xiaoming.elasticsearch_springboot.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import java.util.List;
 @RequestMapping("/blog")
 public class BlogContoller {
 
+    @Autowired
     private BlogService service;
 
     @RequestMapping(method = RequestMethod.POST)
@@ -24,6 +26,7 @@ public class BlogContoller {
 
     @RequestMapping(method = RequestMethod.GET)
     public MyBlog get(@Param("id") int id) {
+        System.out.println(id);
         MyBlog blog = service.getBlog(id);
         if (blog == null) {
             throw new ResourceNotFoundException();
