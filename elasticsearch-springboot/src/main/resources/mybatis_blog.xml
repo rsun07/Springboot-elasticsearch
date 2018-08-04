@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.xiaoming.elasticsearch_springboot.dao.IBlogDao">
+
+    <insert id="insert">
+        insert into blog(author, title, content) values (#{author}, #{title}, #{content})
+        <selectKey resultType="int" keyProperty="id" order="AFTER">
+            select @@identity
+        </selectKey>
+    </insert>
+
+    <select id="get" resultType="pers.xiaoming.elasticsearch_springboot.model.MyBlog">
+        select id, author, title, content, create_at from blog where id = #{id}
+    </select>
+
+    <select id="select" resultType="pers.xiaoming.elasticsearch_springboot.model.MyBlog">
+        select id, author, title, content, create_at from blog where id = #{id}
+    </select>
+
+    <select id="selectByIdRange" resultType="pers.xiaoming.elasticsearch_springboot.model.MyBlog">
+        select id, author, title, content, create_at from blog where id = #{id} bewteen #{start} and #{end}
+    </select>
+
+</mapper>
