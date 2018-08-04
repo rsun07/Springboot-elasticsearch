@@ -5,29 +5,30 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import pers.xiaoming.elasticsearch_springboot.exception.ExceptionResolver;
 import pers.xiaoming.elasticsearch_springboot.exception.ResourceNotFoundException;
-import pers.xiaoming.elasticsearch_springboot.model.MyBlog;
+import pers.xiaoming.elasticsearch_springboot.model.Blog;
 import pers.xiaoming.elasticsearch_springboot.service.BlogService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/blog")
-public class BlogContoller {
+public class BlogContoller extends ExceptionResolver {
 
     @Autowired
     private BlogService service;
 
     @RequestMapping(method = RequestMethod.POST)
-    public MyBlog post(MyBlog blog) {
+    public Blog post(Blog blog) {
         service.createBlog(blog);
         return blog;
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public MyBlog get(@Param("id") int id) {
+    public Blog get(@Param("id") int id) {
         System.out.println(id);
-        MyBlog blog = service.getBlog(id);
+        Blog blog = service.getBlog(id);
         if (blog == null) {
             throw new ResourceNotFoundException();
         }
@@ -35,7 +36,7 @@ public class BlogContoller {
     }
 
     @RequestMapping(value = "/range", method = RequestMethod.GET)
-    public List<MyBlog> getByRange(@Param("start") int start, @Param("end") int end) {
+    public List<Blog> getByRange(@Param("start") int start, @Param("end") int end) {
         return service.getBlogs(start, end);
     }
 }

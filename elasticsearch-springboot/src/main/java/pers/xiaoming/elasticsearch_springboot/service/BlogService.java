@@ -1,13 +1,13 @@
 package pers.xiaoming.elasticsearch_springboot.service;
 
-import pers.xiaoming.elasticsearch_springboot.model.MyBlog;
+import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.List;
 
 public interface BlogService {
-    int createBlog(MyBlog blog);
+    int createBlog(Blog blog);
 
-    MyBlog getBlog(int id);
+    Blog getBlog(int id);
 
-    List<MyBlog> getBlogs(int start, int end);
+    List<Blog> getBlogs(int start, int end);
 }

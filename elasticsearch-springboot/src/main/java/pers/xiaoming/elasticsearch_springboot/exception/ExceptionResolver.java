@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 public class ExceptionResolver {
-    @ExceptionHandler
-    public ResponseEntity<String> handleResourceNotFoundException(Exception ex, int id) {
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> handleResourceNotFoundException(Exception ex) {
         return new ResponseEntity<>("blog not found", HttpStatus.NOT_FOUND);
     }
 

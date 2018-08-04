@@ -11,11 +11,11 @@
         </selectKey>
     </insert>
 
-    <select id="select" resultType="pers.xiaoming.elasticsearch_springboot.model.MyBlog">
+    <select id="select" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
         select id, author, title, content, created_at from blog where id = #{id}
     </select>
 
-    <select id="selectByIdRange" resultType="pers.xiaoming.elasticsearch_springboot.model.MyBlog">
+    <select id="selectByIdRange" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
         select id, author, title, content, created_at from blog where id = #{id} bewteen #{start} and #{end}
     </select>
 

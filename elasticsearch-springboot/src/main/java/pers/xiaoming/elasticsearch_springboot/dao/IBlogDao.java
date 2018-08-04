@@ -1,15 +1,15 @@
 package pers.xiaoming.elasticsearch_springboot.dao;
 
 import org.springframework.stereotype.Repository;
-import pers.xiaoming.elasticsearch_springboot.model.MyBlog;
+import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.List;
 
 @Repository
 public interface IBlogDao {
-    int insert(MyBlog blog);
+    int insert(Blog blog);
 
-    MyBlog select(int id);
+    Blog select(int id);
 
-    List<MyBlog> selectByIdRange(int start, int end);
+    List<Blog> selectByIdRange(int start, int end);
 }
