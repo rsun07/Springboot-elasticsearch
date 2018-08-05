@@ -6,33 +6,24 @@
 
     <insert id="create">
         insert into blog(author, title, content) values (#{author}, #{title}, #{content})
-        <!--<selectKey resultType="int" keyProperty="id" order="AFTER">-->
-            <!--select @@identity-->
-        <!--</selectKey>-->
     </insert>
 
-    <!--<select id="selectById" resultMap="Blog">-->
-        <!--select id, author, title, content, created_at from blog where id = #{id}-->
-    <!--</select>-->
-
     <select id="selectByTitle" resultMap="Blog">
-        select author, title, content, created_at from blog where title = #{title}
+        select title, author, content, created_at from blog where title = #{title}
     </select>
 
     <select id="selectByAuthor" resultMap="Blog">
-        select author, title, content, created_at from blog where author = #{author}
+        select title, author, content, created_at from blog where author = #{author}
     </select>
 
     <!--select all, should do memory check in prod env-->
     <select id="selectAll" resultMap="Blog">
-        select author, title, content, created_at from blog limit 100
+        select title, author, content, created_at from blog limit 100
     </select>
 
     <resultMap id="Blog" type="pers.xiaoming.elasticsearch_springboot.model.Blog">
-        <!--ignore id here, reason see Blog.java-->
-        <!--<id column="id" property="id"/>-->
+        <id column="title" property="title"/>
         <result column="author" property="author"/>
-        <result column="title" property="title"/>
         <result column="content" property="content"/>
         <result column="created_at" property="createdAt"/>
     </resultMap>
