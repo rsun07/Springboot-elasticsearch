@@ -26,9 +26,7 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public Blog searchByTitle(String title) {
-        List<Blog> blogs = blogDao.selectAll();
-        repository.deleteAll();
-        repository.saveAll(blogs);
+        refreshRepository();
 
         Optional<Blog> result = repository.findById(title);
 
@@ -37,6 +35,10 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<Blog> searchByAuthor(String author) {
+
+        // Don't do it, refresh will be done in the searchByAuthor(author, page) function
+        // refreshRepository();
+
         Page<Blog> result =  searchByAuthor(author, PageRequest.of(0, DEFAULT_MAX_PAGE_SIZE));
         return result.getContent();
     }
@@ -44,10 +46,14 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public Page<Blog> searchByAuthor(String author, PageRequest page) {
+        refreshRepository();
+
+        return repository.findByAuthor(author, page);
+    }
+
+    private void refreshRepository() {
         List<Blog> blogs = blogDao.selectAll();
         repository.deleteAll();
         repository.saveAll(blogs);
-
-        return repository.findByAuthor(author, page);
     }
 }
