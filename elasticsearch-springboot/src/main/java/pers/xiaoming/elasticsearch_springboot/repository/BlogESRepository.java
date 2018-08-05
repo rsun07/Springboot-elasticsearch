@@ -16,7 +16,10 @@ public interface BlogESRepository extends ElasticsearchRepository<Blog, String> 
 
     List<Blog> findByContentContaining(String searchStr);
 
-    List<Blog> findByContentContainingOrderByCreatedAtAsc(String searchStr);
+    // TODO: need to fix order issue in elastic search
+    // Page<Blog> findByContentContainingOrderByCreatedAtAsc(String searchStr);
 
-    List<Blog> findByTitleContains(String titleQuery);
+    // If use List<Blog> here as return value, may only limit to get 10 result
+    // Not sure why, but after change to Page<Blog>, it works fine
+    Page<Blog> findByTitleContaining(String titleQuery, Pageable pageable);
 }

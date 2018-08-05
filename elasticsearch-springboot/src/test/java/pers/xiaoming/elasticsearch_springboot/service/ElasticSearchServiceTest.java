@@ -46,6 +46,16 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
     }
 
     @Test
+    public void testSearchByTitleContains() {
+        String[] titlePrefixes = InitDB.getTITLE_PREFIXES();
+        for (String title : titlePrefixes) {
+            List<Blog> blogs = service.searchByTitleContains(title);
+            log.info("Search by Title Contains from ES : search {}, \nresult {}", title, blogs);
+            Assert.assertSame(dbInit.getTitlePrefixToNumMap().get(title), blogs.size());
+        }
+    }
+
+    @Test
     public void testSearchByAuthor() {
         String[] authors = InitDB.getAUTHORS();
         for (String author : authors) {
@@ -70,7 +80,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
         String author = InitDB.getAUTHORS()[0];
         // This will limit to only return one
         Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 1));
-        log.info("Search by Author with page from ES : search {}, \nresult {}", author, blogs);
+        log.info("Search by Author with page limit 1 from ES : search {}, \nresult {}", author, blogs);
 
         // Total elements still get the right count from page 0 to unlimited size
         Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());
@@ -84,7 +94,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
         String author = InitDB.getAUTHORS()[0];
         // This will limit to only return one
         Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(2, 100));
-        log.info("Search by Author with page from ES : search {}, \nresult {}.", author, blogs);
+        log.info("Search by Author with page starting from page 2 from ES : search {}, \nresult {}.", author, blogs);
 
         // Total elements still get the right count from page 0
         Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());

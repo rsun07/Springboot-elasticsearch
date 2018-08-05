@@ -42,7 +42,10 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<Blog> searchByTitleContains(String titleQuery) {
-        return repository.findByTitleContains(titleQuery);
+        // Should use Page<Blog> as the repository's return type
+        // Otherwise may limit to 10 or some number
+        Page<Blog> blogs = repository.findByTitleContaining(titleQuery, PageRequest.of(0, DEFAULT_MAX_PAGE_SIZE));
+        return blogs.getContent();
     }
 
     @Override
