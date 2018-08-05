@@ -7,15 +7,15 @@ import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.List;
 
-@Service
+@Service("blogService")
 public class BlogServiceImpl implements BlogService {
 
     @Autowired
     private IBlogDao blogDao;
 
     @Override
-    public int createBlog(Blog blog) {
-        return blogDao.create(blog);
+    public void createBlog(Blog blog) {
+        blogDao.create(blog);
     }
 
     @Override

@@ -18,8 +18,12 @@ import java.util.List;
 @RequestMapping("/blog")
 public class BlogContoller extends ExceptionResolver {
 
-    @Autowired
     private BlogService service;
+
+    @Autowired
+    public BlogContoller(BlogService service) {
+        this.service = service;
+    }
 
     @RequestMapping(method = RequestMethod.POST)
     public Blog post(@RequestBody Blog blog) {

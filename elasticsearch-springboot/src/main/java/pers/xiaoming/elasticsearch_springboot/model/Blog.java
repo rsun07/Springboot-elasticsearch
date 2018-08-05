@@ -8,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.sql.Timestamp;
+import java.util.Objects;
 
 
 @Data
@@ -40,5 +41,20 @@ public class Blog {
         this.title = title;
         this.author = author;
         this.content = content;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Blog blog = (Blog) o;
+        return Objects.equals(title, blog.title) &&
+                Objects.equals(author, blog.author) &&
+                Objects.equals(content, blog.content);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), title, author, content);
     }
 }

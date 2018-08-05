@@ -16,8 +16,12 @@ import java.util.List;
 @RequestMapping("/blog_search")
 public class SearchController extends ExceptionResolver {
 
-    @Autowired
     private SearchService service;
+
+    @Autowired
+    public SearchController(SearchService service) {
+        this.service = service;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public Blog searchByTitle(@Param("title") String title) throws BadRequestException {

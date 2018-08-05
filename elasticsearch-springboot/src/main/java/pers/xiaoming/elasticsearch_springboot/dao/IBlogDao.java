@@ -1,13 +1,14 @@
 package pers.xiaoming.elasticsearch_springboot.dao;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.List;
 
-@Repository
+@Component
 public interface IBlogDao {
-    int create(Blog blog);
+    void create(Blog blog);
 
     Blog selectByTitle(String title);
 

@@ -5,7 +5,7 @@ import pers.xiaoming.elasticsearch_springboot.model.Blog;
 import java.util.List;
 
 public interface BlogService {
-    int createBlog(Blog blog);
+    void createBlog(Blog blog);
 
     Blog getBlogByTitle(String title);
 
