@@ -10,6 +10,11 @@ public class ExceptionResolver {
         return new ResponseEntity<>("blog not found", HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<String> handleBadRequestException(Exception ex) {
+        return new ResponseEntity<>("search must contains either author or title", HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler
     public String handleOtherException(Exception ex) {
         return ex.getMessage();
