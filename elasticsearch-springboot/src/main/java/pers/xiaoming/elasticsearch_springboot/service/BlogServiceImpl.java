@@ -20,11 +20,18 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Blog getBlog(int id) {
-        return blogDao.select(id);
+        return blogDao.selectById(id);
     }
 
     @Override
-    public List<Blog> getBlogs(int start, int end) {
-        return blogDao.selectByIdRange(start, end);
+    public Blog getBlogByTitle(String title) {
+        return blogDao.selectByTitle(title);
     }
+
+    @Override
+    public List<Blog> getBlogByAuthor(String author) {
+        return blogDao.selectByAuthor(author);
+    }
+
+
 }

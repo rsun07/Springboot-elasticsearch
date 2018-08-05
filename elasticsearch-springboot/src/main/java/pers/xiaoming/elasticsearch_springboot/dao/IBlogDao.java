@@ -9,9 +9,11 @@ import java.util.List;
 public interface IBlogDao {
     int insert(Blog blog);
 
-    Blog select(int id);
+    Blog selectById(int id);
 
-    List<Blog> selectByIdRange(int start, int end);
+    Blog selectByTitle(String title);
+
+    List<Blog> selectByAuthor(String author);
 
     List<Blog> selectAll();
 }

@@ -27,17 +27,24 @@ public class BlogContoller extends ExceptionResolver {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public Blog get(@Param("id") int id) {
-        System.out.println(id);
-        Blog blog = service.getBlog(id);
+    public Blog getById(@Param("id") int id) {
+        return nullCheck(service.getBlog(id));
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public Blog getByTitle(@Param("title") String title) {
+        return nullCheck(service.getBlogByTitle(title));
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public List<Blog> getByAuthor(@Param("author") String author) {
+        return service.getBlogByAuthor(author);
+    }
+
+    private Blog nullCheck(Blog blog) {
         if (blog == null) {
             throw new ResourceNotFoundException();
         }
         return blog;
-    }
-
-    @RequestMapping(value = "/range", method = RequestMethod.GET)
-    public List<Blog> getByRange(@Param("start") int start, @Param("end") int end) {
-        return service.getBlogs(start, end);
     }
 }

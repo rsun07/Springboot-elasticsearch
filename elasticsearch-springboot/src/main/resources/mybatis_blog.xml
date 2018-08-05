@@ -11,12 +11,16 @@
         </selectKey>
     </insert>
 
-    <select id="select" resultMap="Blog">
+    <select id="selectById" resultMap="Blog">
         select id, author, title, content, created_at from blog where id = #{id}
     </select>
 
-    <select id="selectByIdRange" resultMap="Blog">
-        select id, author, title, content, created_at from blog where id = #{id} bewteen #{start} and #{end}
+    <select id="selectByTitle" resultMap="Blog">
+        select id, author, title, content, created_at from blog where title = #{title}
+    </select>
+
+    <select id="selectByAuthor" resultMap="Blog">
+        select id, author, title, content, created_at from blog where author = #{author}
     </select>
 
     <!--select all, should do memory check in prod env-->

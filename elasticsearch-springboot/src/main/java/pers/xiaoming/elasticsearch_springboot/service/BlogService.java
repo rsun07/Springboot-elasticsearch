@@ -9,5 +9,7 @@ public interface BlogService {
 
     Blog getBlog(int id);
 
-    List<Blog> getBlogs(int start, int end);
+    Blog getBlogByTitle(String title);
+
+    List<Blog> getBlogByAuthor(String author);
 }

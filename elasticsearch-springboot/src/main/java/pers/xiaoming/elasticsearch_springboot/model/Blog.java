@@ -35,4 +35,10 @@ public class Blog {
 
     @JsonProperty("created_at")
     private Timestamp createdAt;
+
+    public Blog(String title, String author, String content) {
+        this.title = title;
+        this.author = author;
+        this.content = content;
+    }
 }
