@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 public class SearchServiceImpl implements SearchService {
 
-    private static final int DEFAULT_MAX_PAGE_SIZE = 20;
+    private static final int DEFAULT_MAX_PAGE_SIZE = 100;
 
     private BlogESRepository repository;
 

@@ -147,6 +147,7 @@
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng/blogservice.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testng/esservice.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

@@ -59,14 +59,43 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
     public void testSearchByAuthorWithPage() {
         String[] authors = InitDB.getAUTHORS();
         for (String author : authors) {
-            Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 10));
+            Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 100));
             log.info("Search by Author with page from ES : search {}, \nresult {}", author, blogs);
             Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());
         }
     }
 
     @Test
+    public void testSearchByAuthorWithPageLimit1() {
+        String author = InitDB.getAUTHORS()[0];
+        // This will limit to only return one
+        Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 1));
+        log.info("Search by Author with page from ES : search {}, \nresult {}", author, blogs);
+
+        // Total elements still get the right count from page 0 to unlimited size
+        Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());
+
+        List<Blog> blogList = blogs.getContent();
+        Assert.assertSame(1, blogList.size());
+    }
+
+    @Test
+    public void testSearchByAuthorWithPageStartFromPageTwo() {
+        String author = InitDB.getAUTHORS()[0];
+        // This will limit to only return one
+        Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(2, 100));
+        log.info("Search by Author with page from ES : search {}, \nresult {}.", author, blogs);
+
+        // Total elements still get the right count from page 0
+        Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());
+
+        List<Blog> blogList = blogs.getContent();
+        Assert.assertSame(0, blogList.size());
+    }
+
+    @Test
     public void testSearchByAuthorNot() {
+        service.refreshRepository();
         String[] authors = InitDB.getAUTHORS();
         for (String author : authors) {
             List<Blog> blogs = service.searchByAuthorNot(author);
