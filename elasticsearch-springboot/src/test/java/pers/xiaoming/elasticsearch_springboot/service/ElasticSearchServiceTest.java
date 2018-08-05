@@ -14,6 +14,7 @@ import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
 import pers.xiaoming.elasticsearch_springboot.dao.InitDB;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest(classes = Main.class)
@@ -121,5 +122,25 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
             List<Blog> blogs = service.searchByContent(contentQuery);
             log.info("Search by Content from ES : search {}, \nresult {}", contentQuery, blogs);
         }
+    }
+
+    @Test
+    public void testSearchByTitleContainsAndAuthor() {
+        String titlePrefix = InitDB.getTITLE_PREFIXES()[0];
+        String author = InitDB.getAUTHORS()[0];
+        List<Blog> blogs = service.searchByTitleContainsAndAuthor(titlePrefix, author);
+        log.info("Search by Title Contains and Author from ES : search title: {}, author: {}\nresult {}", titlePrefix, blogs);
+        Assert.assertSame(getTitleAndAuthor(titlePrefix, author).size(), blogs.size());
+    }
+
+    private List<Blog> getTitleAndAuthor(String titlePrefix, String author) {
+        List<Blog> blogs = dbInit.getAuthorToBlogMap().get(author);
+        List<Blog> result = new ArrayList<>();
+        for (Blog blog : blogs) {
+            if (blog.getTitle().startsWith(titlePrefix)) {
+                result.add(blog);
+            }
+        }
+        return result;
     }
 }
