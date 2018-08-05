@@ -12,4 +12,6 @@ public interface IBlogDao {
     Blog select(int id);
 
     List<Blog> selectByIdRange(int start, int end);
+
+    List<Blog> selectAll();
 }
