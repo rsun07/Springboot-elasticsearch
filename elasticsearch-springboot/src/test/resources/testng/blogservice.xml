@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="hibernate_test">
-    <!--<test name="Initial DB">-->
-        <!--<classes>-->
-            <!--<class name="pers.xiaoming.elasticsearch_springboot.InitDB"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-
+<suite name="Blog Service Test">
     <test name="Blog Service CURD test">
         <classes>
             <class name="pers.xiaoming.elasticsearch_springboot.BlogServiceTest"/>
