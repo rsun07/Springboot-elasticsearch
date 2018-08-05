@@ -20,11 +20,11 @@ public class SearchController extends ExceptionResolver {
     private SearchService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Blog> search(@Param("title") String title, @Param("author") String author) throws BadRequestException {
-        if (isBlank(title) && isBlank(author)) {
+    public Blog searchByTitle(@Param("title") String title) throws BadRequestException {
+        if (isBlank(title)) {
             throw new BadRequestException();
         }
-        return service.search(title, author);
+        return service.searchTitle(title);
     }
 
     boolean isBlank(String str) {

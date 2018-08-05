@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Data
 @NoArgsConstructor
@@ -19,17 +19,14 @@ public class Blog {
     // id annotation is for elastic search finding the primary key
     @Id
     @JsonProperty
-    private int id;
+    private String title;
 
     @JsonProperty
     private String author;
 
     @JsonProperty
-    private String title;
-
-    @JsonProperty
     private String content;
 
     @JsonProperty("created_at")
-    private Date createdAt;
+    private Timestamp createdAt;
 }

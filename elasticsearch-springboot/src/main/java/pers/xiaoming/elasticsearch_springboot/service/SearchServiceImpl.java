@@ -11,6 +11,7 @@ import pers.xiaoming.elasticsearch_springboot.repository.BlogElasticSearchReposi
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SearchServiceImpl implements SearchService {
@@ -22,17 +23,14 @@ public class SearchServiceImpl implements SearchService {
     private IBlogDao blogDao;
 
     @Override
-    public List<Blog> search(String author, String title) {
+    public Blog searchTitle(String title) {
         List<Blog> blogs = blogDao.selectAll();
         repository.deleteAll();
         repository.saveAll(blogs);
 
         Pageable pageable = PageRequest.of(0, 20);
-        Page<Blog> page = repository.findDistinctBlogByAuthorContainingOrTitleContaining(author, title, pageable);
+        Optional<Blog> result = repository.findById(title);
 
-        List<Blog> result = new ArrayList<>();
-        page.forEach(result::add);
-
-        return result;
+        return result.get();
     }
 }

@@ -5,5 +5,5 @@ import pers.xiaoming.elasticsearch_springboot.model.Blog;
 import java.util.List;
 
 public interface SearchService {
-    List<Blog> search(String author, String title);
+    Blog searchTitle(String title);
 }
