@@ -4,16 +4,16 @@
 
 <mapper namespace="pers.xiaoming.elasticsearch_springboot.dao.IBlogDao">
 
-    <insert id="insert">
+    <insert id="create">
         insert into blog(author, title, content) values (#{author}, #{title}, #{content})
-        <selectKey resultType="int" keyProperty="id" order="AFTER">
-            select @@identity
-        </selectKey>
+        <!--<selectKey resultType="int" keyProperty="id" order="AFTER">-->
+            <!--select @@identity-->
+        <!--</selectKey>-->
     </insert>
 
-    <select id="selectById" resultMap="Blog">
-        select id, author, title, content, created_at from blog where id = #{id}
-    </select>
+    <!--<select id="selectById" resultMap="Blog">-->
+        <!--select id, author, title, content, created_at from blog where id = #{id}-->
+    <!--</select>-->
 
     <select id="selectByTitle" resultMap="Blog">
         select id, author, title, content, created_at from blog where title = #{title}

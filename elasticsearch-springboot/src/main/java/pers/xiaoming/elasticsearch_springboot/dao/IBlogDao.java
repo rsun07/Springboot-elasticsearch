@@ -7,9 +7,7 @@ import java.util.List;
 
 @Repository
 public interface IBlogDao {
-    int insert(Blog blog);
-
-    Blog selectById(int id);
+    int create(Blog blog);
 
     Blog selectByTitle(String title);
 

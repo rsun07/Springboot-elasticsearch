@@ -2,6 +2,7 @@ package pers.xiaoming.elasticsearch_springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,18 +27,13 @@ public class BlogContoller extends ExceptionResolver {
         return blog;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public Blog getById(@Param("id") int id) {
-        return nullCheck(service.getBlog(id));
-    }
-
-    @RequestMapping(method = RequestMethod.GET)
-    public Blog getByTitle(@Param("title") String title) {
+    @RequestMapping(value = "/title/{title}", method = RequestMethod.GET)
+    public Blog getByTitle(@PathVariable("title") String title) {
         return nullCheck(service.getBlogByTitle(title));
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<Blog> getByAuthor(@Param("author") String author) {
+    @RequestMapping(value = "/author/{author}", method = RequestMethod.GET)
+    public List<Blog> getByAuthor(@PathVariable("author") String author) {
         return service.getBlogByAuthor(author);
     }
 

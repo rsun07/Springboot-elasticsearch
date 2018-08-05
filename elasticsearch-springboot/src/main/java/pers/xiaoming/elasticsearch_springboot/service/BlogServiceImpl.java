@@ -15,12 +15,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public int createBlog(Blog blog) {
-        return blogDao.insert(blog);
-    }
-
-    @Override
-    public Blog getBlog(int id) {
-        return blogDao.selectById(id);
+        return blogDao.create(blog);
     }
 
     @Override

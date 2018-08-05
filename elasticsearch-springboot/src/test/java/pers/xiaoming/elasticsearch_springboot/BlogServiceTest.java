@@ -1,5 +1,6 @@
 package pers.xiaoming.elasticsearch_springboot;
 
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,12 +14,21 @@ import pers.xiaoming.elasticsearch_springboot.service.BlogService;
 @SpringBootTest
 public class BlogServiceTest {
     @Autowired
-    private BlogService service;
+    private static BlogService service;
 
     private static Blog blog;
 
     @BeforeClass
     public static void createStudent() {
         blog = new Blog("MyTitle", "AuthorMe", "Random content");
+    }
+
+    @Test
+    public void testCURD() {
+        service.createBlog(blog);
+        String title = blog.getTitle();
+
+        Blog actual = service.getBlogByTitle(title);
+        Assert.assertEquals(blog, actual);
     }
 }
