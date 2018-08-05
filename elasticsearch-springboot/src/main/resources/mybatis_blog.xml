@@ -20,7 +20,7 @@
     </select>
 
     <!--select all, should do memory check in prod env-->
-    <select id="selectByIdRange" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
+    <select id="selectAll" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
         select id, author, title, content, created_at from blog limit 100
     </select>
 

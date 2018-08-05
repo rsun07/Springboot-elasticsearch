@@ -16,14 +16,14 @@ import java.util.Date;
 @Document(indexName = "blog", type = "blog")
 public class Blog {
 
+    // id annotation is for elastic search finding the primary key
+    @Id
     @JsonProperty
     private int id;
 
     @JsonProperty
     private String author;
 
-    // id annotation is for elastic search finding the primary key
-    @Id
     @JsonProperty
     private String title;
 

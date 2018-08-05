@@ -11,7 +11,7 @@
         <java.source>1.8</java.source>
         <java.target>1.8</java.target>
 
-        <spring.boot.version>2.0.1.RELEASE</spring.boot.version>
+        <spring.boot.version>2.0.4.RELEASE</spring.boot.version>
 
         <mysql.connector.version>5.1.46</mysql.connector.version>
         <junit.version>4.12</junit.version>
@@ -59,6 +59,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -75,6 +76,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
             </plugin>
 
             <plugin>
@@ -100,12 +102,6 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
             </plugin>
 
             <plugin>

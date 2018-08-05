@@ -10,12 +10,8 @@ import java.util.List;
 @Service
 public class BlogServiceImpl implements BlogService {
 
-    private IBlogDao blogDao;
-
     @Autowired
-    public BlogServiceImpl(IBlogDao blogDao) {
-        this.blogDao = blogDao;
-    }
+    private IBlogDao blogDao;
 
     @Override
     public int createBlog(Blog blog) {
