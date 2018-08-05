@@ -8,20 +8,20 @@
         insert into blog(author, title, content) values (#{author}, #{title}, #{content})
     </insert>
 
-    <select id="selectByTitle" resultMap="Blog">
+    <select id="selectByTitle" resultMap="BlogMapper">
         select title, author, content, created_at from blog where title = #{title}
     </select>
 
-    <select id="selectByAuthor" resultMap="Blog">
+    <select id="selectByAuthor" resultMap="BlogMapper">
         select title, author, content, created_at from blog where author = #{author}
     </select>
 
     <!--select all, should do memory check in prod env-->
-    <select id="selectAll" resultMap="Blog">
+    <select id="selectAll" resultMap="BlogMapper">
         select title, author, content, created_at from blog limit 100
     </select>
 
-    <resultMap id="Blog" type="pers.xiaoming.elasticsearch_springboot.model.Blog">
+    <resultMap id="BlogMapper" type="Blog">
         <id column="title" property="title"/>
         <result column="author" property="author"/>
         <result column="content" property="content"/>
