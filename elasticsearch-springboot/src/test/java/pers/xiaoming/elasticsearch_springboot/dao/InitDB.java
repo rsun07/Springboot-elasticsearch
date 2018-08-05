@@ -6,7 +6,9 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import pers.xiaoming.elasticsearch_springboot.Main;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -25,7 +27,7 @@ public class InitDB extends AbstractTestNGSpringContextTests {
     private static final String[] TITLE_PREFIXES = {"MyTitle", "TestTitle", "NotRelated"};
 
     @Getter
-    private Map<String, Blog> authorToBlogMap;
+    private Map<String, List<Blog>> authorToBlogMap;
 
     @Getter
     private Map<String, Blog> titleToBlogMap;
@@ -74,7 +76,12 @@ public class InitDB extends AbstractTestNGSpringContextTests {
     }
 
     private void saveBlog(String title, String titlePrefix, String author, Blog blog) {
-        authorToBlogMap.put(author, blog);
+        List<Blog> blogs = authorToBlogMap.get(author);
+        if (blogs == null || blogs.size() == 0) {
+            blogs = new ArrayList<>();
+        }
+        blogs.add(blog);
+        authorToBlogMap.put(author, blogs);
         titleToBlogMap.put(title, blog);
 
         Integer count = titlePrefixToNumMap.get(titlePrefix);
