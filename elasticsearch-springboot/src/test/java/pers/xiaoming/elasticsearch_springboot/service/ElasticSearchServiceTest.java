@@ -12,8 +12,6 @@ import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
 import pers.xiaoming.elasticsearch_springboot.dao.InitDB;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
-import java.util.Optional;
-
 @SpringBootTest(classes = Main.class)
 @Slf4j
 public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {

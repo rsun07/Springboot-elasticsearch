@@ -10,8 +10,6 @@ import pers.xiaoming.elasticsearch_springboot.exception.ExceptionResolver;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 import pers.xiaoming.elasticsearch_springboot.service.SearchService;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/blog_search")
 public class SearchController extends ExceptionResolver {
