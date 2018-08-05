@@ -9,6 +9,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.sql.Timestamp;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,6 +21,9 @@ public class Blog {
     @Id
     @JsonProperty
     private String title;
+
+    // @JsonProperty
+    // private String id;
 
     @JsonProperty
     private String author;

@@ -11,17 +11,25 @@
         </selectKey>
     </insert>
 
-    <select id="select" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
+    <select id="select" resultMap="Blog">
         select id, author, title, content, created_at from blog where id = #{id}
     </select>
 
-    <select id="selectByIdRange" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
+    <select id="selectByIdRange" resultMap="Blog">
         select id, author, title, content, created_at from blog where id = #{id} bewteen #{start} and #{end}
     </select>
 
     <!--select all, should do memory check in prod env-->
-    <select id="selectAll" resultType="pers.xiaoming.elasticsearch_springboot.model.Blog">
+    <select id="selectAll" resultMap="Blog">
         select id, author, title, content, created_at from blog limit 100
     </select>
+
+    <resultMap id="Blog" type="pers.xiaoming.elasticsearch_springboot.model.Blog">
+        <!--<id column="id" property="id"/>-->
+        <result column="author" property="author"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="created_at" property="createdAt"/>
+    </resultMap>
 
 </mapper>
