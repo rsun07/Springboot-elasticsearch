@@ -12,6 +12,8 @@ public interface SearchService {
 
     Blog searchByTitle(String title);
 
+    List<Blog> searchByTitleContains(String titleQuery);
+
     List<Blog> searchByAuthor(String author);
 
     List<Blog> searchByAuthorNot(String author);

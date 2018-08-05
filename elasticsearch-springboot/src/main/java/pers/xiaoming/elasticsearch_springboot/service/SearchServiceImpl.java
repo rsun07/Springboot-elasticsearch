@@ -41,6 +41,11 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
+    public List<Blog> searchByTitleContains(String titleQuery) {
+        return repository.findByTitleContains(titleQuery);
+    }
+
+    @Override
     public List<Blog> searchByAuthor(String author) {
 
         // Don't do it, refresh will be done in the searchByAuthor(author, page) function

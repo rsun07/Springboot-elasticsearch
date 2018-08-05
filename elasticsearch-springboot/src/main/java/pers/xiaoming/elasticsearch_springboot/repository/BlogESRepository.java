@@ -18,6 +18,5 @@ public interface BlogESRepository extends ElasticsearchRepository<Blog, String> 
 
     List<Blog> findByContentContainingOrderByCreatedAtAsc(String searchStr);
 
-    // spring will generate the function by the name
-    Page<Blog> findDistinctBlogByAuthorContainingOrTitleContaining(String author, String title, Pageable pageable);
+    List<Blog> findByTitleContains(String titleQuery);
 }
