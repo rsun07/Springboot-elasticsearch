@@ -25,6 +25,7 @@
     </select>
 
     <resultMap id="Blog" type="pers.xiaoming.elasticsearch_springboot.model.Blog">
+        <!--ignore id here, reason see Blog.java-->
         <!--<id column="id" property="id"/>-->
         <result column="author" property="author"/>
         <result column="title" property="title"/>

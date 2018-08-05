@@ -22,6 +22,8 @@ public class Blog {
     @JsonProperty
     private String title;
 
+    // Ignore id here, it has impact on elastic search
+    // Elastic search may choose id to be the default search id which causes issue
     // @JsonProperty
     // private String id;
 
