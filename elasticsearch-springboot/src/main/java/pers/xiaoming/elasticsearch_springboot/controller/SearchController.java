@@ -28,7 +28,7 @@ public class SearchController extends ExceptionResolver {
         if (isBlank(title)) {
             throw new BadRequestException();
         }
-        return service.searchTitle(title);
+        return service.searchByTitle(title);
     }
 
     boolean isBlank(String str) {
