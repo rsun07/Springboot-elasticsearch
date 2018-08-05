@@ -40,7 +40,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
         String[] titlePrefixes = InitDB.getTITLE_PREFIXES();
         for (String title : titlePrefixes) {
             Blog blog = service.searchByTitle(title);
-            log.info("Search by Title from ES: {}", blog);
+            log.info("Search by Title from ES : search {}, \nresult {}", title, blog);
             Assert.assertEquals(dbInit.getTitleToBlogMap().get(title), blog);
         }
     }
@@ -50,7 +50,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
         String[] authors = InitDB.getAUTHORS();
         for (String author : authors) {
             List<Blog> blogs = service.searchByAuthor(author);
-            log.info("Search by Authors from ES : {}", blogs);
+            log.info("Search by Authors from ES : search {}, \nresult {}", author, blogs);
             Assert.assertSame(dbInit.getAuthorToBlogMap().get(author).size(), blogs.size());
         }
     }
@@ -60,15 +60,27 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
         String[] authors = InitDB.getAUTHORS();
         for (String author : authors) {
             Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 10));
-            log.info("Search by Authors from ES : {}", blogs);
+            log.info("Search by Author with page from ES : search {}, \nresult {}", author, blogs);
             Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());
+        }
+    }
+
+    @Test
+    public void testSearchByAuthorNot() {
+        String[] authors = InitDB.getAUTHORS();
+        for (String author : authors) {
+            List<Blog> blogs = service.searchByAuthorNot(author);
+            log.info("Search by NOT Authors from ES : search {}, \nresult {}", author, blogs);
+            Assert.assertSame(InitDB.getNumOfDataGenerate() - dbInit.getAuthorToBlogMap().get(author).size(), blogs.size());
         }
     }
 
     @Test
     public void testSearchByContent() {
         String[] authors = InitDB.getAUTHORS();
-        List<Blog> blogs = service.searchByContent(authors[0]);
-        log.info("Search by Content from ES : {}", blogs.toString());
+        for (String contentQuery : authors) {
+            List<Blog> blogs = service.searchByContent(contentQuery);
+            log.info("Search by Content from ES : search {}, \nresult {}", contentQuery, blogs);
+        }
     }
 }

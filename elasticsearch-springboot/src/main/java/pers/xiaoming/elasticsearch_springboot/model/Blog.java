@@ -57,4 +57,14 @@ public class Blog {
     public int hashCode() {
         return Objects.hash(super.hashCode(), title, author, content);
     }
+
+    @Override
+    public String toString() {
+        return "\nBlog{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", content='" + content + '\'' +
+                ", createdAt=" + createdAt +
+                "}";
+    }
 }
