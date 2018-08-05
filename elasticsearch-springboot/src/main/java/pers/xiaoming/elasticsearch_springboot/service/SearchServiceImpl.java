@@ -2,7 +2,6 @@ package pers.xiaoming.elasticsearch_springboot.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
@@ -73,5 +72,11 @@ public class SearchServiceImpl implements SearchService {
     public List<Blog> searchByContent(String author) {
         return repository.findByContentContaining(author);
         // return repository.findByContentContainingOrderByCreatedAtAsc(author);
+    }
+
+    @Override
+    public List<Blog> searchByTitleContainsAndAuthor(String titleQuery, String author) {
+        Page<Blog> blogs = repository.findByTitleContainsAndAuthor(titleQuery, author, PageRequest.of(0, DEFAULT_MAX_PAGE_SIZE));
+        return blogs.getContent();
     }
 }

@@ -12,8 +12,6 @@ public interface SearchService {
 
     Blog searchByTitle(String title);
 
-    List<Blog> searchByTitleContains(String titleQuery);
-
     List<Blog> searchByAuthor(String author);
 
     List<Blog> searchByAuthorNot(String author);
@@ -21,4 +19,8 @@ public interface SearchService {
     Page<Blog> searchByAuthor(String author, PageRequest page);
 
     List<Blog> searchByContent(String author);
+
+    List<Blog> searchByTitleContains(String titleQuery);
+
+    List<Blog> searchByTitleContainsAndAuthor(String titleQuery, String author);
 }
