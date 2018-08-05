@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pers.xiaoming.elasticsearch_springboot.Main;
 import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
-import pers.xiaoming.elasticsearch_springboot.dao.InitDB;
+import pers.xiaoming.elasticsearch_springboot.service.DBInitForES;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.ArrayList;
@@ -27,18 +27,18 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
     @Autowired
     private IBlogDao dao;
 
-    private static InitDB dbInit;
+    private static DBInitForES dbInit;
 
     @BeforeClass
     public void setup() {
-        dbInit = new InitDB(dao);
+        dbInit = new DBInitForES(dao);
         dbInit.initDB();
         service.refreshRepository();
     }
 
     @Test
     public void testSearchByTitle() {
-        String[] titlePrefixes = InitDB.getTITLE_PREFIXES();
+        String[] titlePrefixes = DBInitForES.getTITLE_PREFIXES();
         for (String title : titlePrefixes) {
             Blog blog = service.searchByTitle(title);
             log.info("Search by Title from ES : search {}, \nresult {}", title, blog);
@@ -48,7 +48,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testSearchByTitleContains() {
-        String[] titlePrefixes = InitDB.getTITLE_PREFIXES();
+        String[] titlePrefixes = DBInitForES.getTITLE_PREFIXES();
         for (String title : titlePrefixes) {
             List<Blog> blogs = service.searchByTitleContains(title);
             log.info("Search by Title Contains from ES : search {}, \nresult {}", title, blogs);
@@ -58,7 +58,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testSearchByAuthor() {
-        String[] authors = InitDB.getAUTHORS();
+        String[] authors = DBInitForES.getAUTHORS();
         for (String author : authors) {
             List<Blog> blogs = service.searchByAuthor(author);
             log.info("Search by Authors from ES : search {}, \nresult {}", author, blogs);
@@ -68,7 +68,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testSearchByAuthorWithPage() {
-        String[] authors = InitDB.getAUTHORS();
+        String[] authors = DBInitForES.getAUTHORS();
         for (String author : authors) {
             Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 100));
             log.info("Search by Author with page from ES : search {}, \nresult {}", author, blogs);
@@ -78,7 +78,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testSearchByAuthorWithPageLimit1() {
-        String author = InitDB.getAUTHORS()[0];
+        String author = DBInitForES.getAUTHORS()[0];
         // This will limit to only return one
         Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(0, 1));
         log.info("Search by Author with page limit 1 from ES : search {}, \nresult {}", author, blogs);
@@ -92,7 +92,7 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testSearchByAuthorWithPageStartFromPageTwo() {
-        String author = InitDB.getAUTHORS()[0];
+        String author = DBInitForES.getAUTHORS()[0];
         // This will limit to only return one
         Page<Blog> blogs = service.searchByAuthor(author, PageRequest.of(2, 100));
         log.info("Search by Author with page starting from page 2 from ES : search {}, \nresult {}.", author, blogs);
@@ -107,17 +107,17 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testSearchByAuthorNot() {
         service.refreshRepository();
-        String[] authors = InitDB.getAUTHORS();
+        String[] authors = DBInitForES.getAUTHORS();
         for (String author : authors) {
             List<Blog> blogs = service.searchByAuthorNot(author);
             log.info("Search by NOT Authors from ES : search {}, \nresult {}", author, blogs);
-            Assert.assertSame(InitDB.getNumOfDataGenerate() - dbInit.getAuthorToBlogMap().get(author).size(), blogs.size());
+            Assert.assertSame(DBInitForES.getNumOfDataGenerate() - dbInit.getAuthorToBlogMap().get(author).size(), blogs.size());
         }
     }
 
     @Test
     public void testSearchByContent() {
-        String[] authors = InitDB.getAUTHORS();
+        String[] authors = DBInitForES.getAUTHORS();
         for (String contentQuery : authors) {
             List<Blog> blogs = service.searchByContent(contentQuery);
             log.info("Search by Content from ES : search {}, \nresult {}", contentQuery, blogs);
@@ -126,8 +126,8 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testSearchByTitleContainsAndAuthor() {
-        String titlePrefix = InitDB.getTITLE_PREFIXES()[0];
-        String author = InitDB.getAUTHORS()[0];
+        String titlePrefix = DBInitForES.getTITLE_PREFIXES()[0];
+        String author = DBInitForES.getAUTHORS()[0];
         List<Blog> blogs = service.searchByTitleContainsAndAuthor(titlePrefix, author);
         log.info("Search by Title Contains and Author from ES : search title: {}, author: {}\nresult {}", titlePrefix, blogs);
         Assert.assertSame(getTitleAndAuthor(titlePrefix, author).size(), blogs.size());

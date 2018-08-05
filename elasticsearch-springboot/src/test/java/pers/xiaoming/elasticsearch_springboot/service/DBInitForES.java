@@ -1,9 +1,8 @@
-package pers.xiaoming.elasticsearch_springboot.dao;
+package pers.xiaoming.elasticsearch_springboot.service;
 
 import lombok.Getter;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import pers.xiaoming.elasticsearch_springboot.Main;
+import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.ArrayList;
@@ -12,8 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-@SpringBootTest(classes = Main.class)
-public class InitDB extends AbstractTestNGSpringContextTests {
+public class DBInitForES extends AbstractTestNGSpringContextTests {
 
     private static final int NUM_OF_DATA_GENERATE = 30;
 
@@ -41,7 +39,7 @@ public class InitDB extends AbstractTestNGSpringContextTests {
 
     private IBlogDao dao;
 
-    public InitDB(IBlogDao dao) {
+    public DBInitForES(IBlogDao dao) {
         this.dao = dao;
         authorToBlogMap = new HashMap<>();
         titleToBlogMap = new HashMap<>();
