@@ -2,6 +2,7 @@ package pers.xiaoming.elasticsearch_springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class BlogContoller extends ExceptionResolver {
     private BlogService service;
 
     @RequestMapping(method = RequestMethod.POST)
-    public Blog post(Blog blog) {
+    public Blog post(@RequestBody Blog blog) {
         service.createBlog(blog);
         return blog;
     }
