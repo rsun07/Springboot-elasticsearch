@@ -16,16 +16,16 @@
     <!--</select>-->
 
     <select id="selectByTitle" resultMap="Blog">
-        select id, author, title, content, created_at from blog where title = #{title}
+        select author, title, content, created_at from blog where title = #{title}
     </select>
 
     <select id="selectByAuthor" resultMap="Blog">
-        select id, author, title, content, created_at from blog where author = #{author}
+        select author, title, content, created_at from blog where author = #{author}
     </select>
 
     <!--select all, should do memory check in prod env-->
     <select id="selectAll" resultMap="Blog">
-        select id, author, title, content, created_at from blog limit 100
+        select author, title, content, created_at from blog limit 100
     </select>
 
     <resultMap id="Blog" type="pers.xiaoming.elasticsearch_springboot.model.Blog">
