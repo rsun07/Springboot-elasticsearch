@@ -2,6 +2,7 @@ package pers.xiaoming.elasticsearch_springboot.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
@@ -22,6 +23,14 @@ public class SearchServiceImpl implements SearchService {
     public SearchServiceImpl(BlogESRepository repository, IBlogDao blogDao) {
         this.repository = repository;
         this.blogDao = blogDao;
+    }
+
+    @Override
+    // in prod, can schedule to refresh, for example, every day or every 3 hours
+    public void refreshRepository() {
+        List<Blog> blogs = blogDao.selectAll();
+        repository.deleteAll();
+        repository.saveAll(blogs);
     }
 
     @Override
@@ -47,10 +56,13 @@ public class SearchServiceImpl implements SearchService {
         return repository.findByAuthor(author, page);
     }
 
-    // in prod, can schedule to refresh, for example, every day or every 3 hours
-    public void refreshRepository() {
-        List<Blog> blogs = blogDao.selectAll();
-        repository.deleteAll();
-        repository.saveAll(blogs);
+    @Override
+    public List<Blog> searchByContent(String author) {
+        return searchByContent(author, Sort.by(Sort.Order.asc("content")));
+    }
+
+    @Override
+    public List<Blog> searchByContent(String author, Sort sort) {
+        return repository.findByContentContaining(author, sort);
     }
 }
