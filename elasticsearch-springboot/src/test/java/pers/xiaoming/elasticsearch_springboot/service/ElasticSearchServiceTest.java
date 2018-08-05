@@ -64,4 +64,11 @@ public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
             Assert.assertSame((long) dbInit.getAuthorToBlogMap().get(author).size(), blogs.getTotalElements());
         }
     }
+
+    @Test
+    public void testSearchByContent() {
+        String[] authors = InitDB.getAUTHORS();
+        List<Blog> blogs = service.searchByContent(authors[0]);
+        log.info("Search by Content from ES : {}", blogs.toString());
+    }
 }

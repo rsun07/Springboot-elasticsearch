@@ -14,9 +14,9 @@ public interface SearchService {
 
     List<Blog> searchByAuthor(String author);
 
+    List<Blog> searchByAuthorNot(String author);
+
     Page<Blog> searchByAuthor(String author, PageRequest page);
 
     List<Blog> searchByContent(String author);
-
-    List<Blog> searchByContent(String author, Sort sort);
 }

@@ -50,19 +50,20 @@ public class SearchServiceImpl implements SearchService {
         return result.getContent();
     }
 
-
     @Override
     public Page<Blog> searchByAuthor(String author, PageRequest page) {
         return repository.findByAuthor(author, page);
     }
 
     @Override
-    public List<Blog> searchByContent(String author) {
-        return searchByContent(author, Sort.by(Sort.Order.asc("content")));
+    public List<Blog> searchByAuthorNot(String author) {
+        Page<Blog> blogs = repository.findByAuthorNot(author, PageRequest.of(0, DEFAULT_MAX_PAGE_SIZE));
+        return blogs.getContent();
     }
 
     @Override
-    public List<Blog> searchByContent(String author, Sort sort) {
-        return repository.findByContentContaining(author, sort);
+    public List<Blog> searchByContent(String author) {
+        return repository.findByContentContaining(author);
+        // return repository.findByContentContainingOrderByCreatedAtAsc(author);
     }
 }
