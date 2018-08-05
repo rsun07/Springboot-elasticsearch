@@ -1,15 +1,12 @@
 package pers.xiaoming.elasticsearch_springboot;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Component;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 import pers.xiaoming.elasticsearch_springboot.service.BlogService;
 
@@ -18,9 +15,8 @@ import pers.xiaoming.elasticsearch_springboot.service.BlogService;
 // After copy paste the resources dir, test get passed
 // Before it cannot find mybatis_blog.xml
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class BlogServiceTest {
+@SpringBootTest(classes = Main.class)
+public class BlogServiceTest extends AbstractTestNGSpringContextTests {
     @Autowired
     @Qualifier("blogService")
     private BlogService blogService;

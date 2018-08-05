@@ -15,4 +15,7 @@ public interface IBlogDao {
     List<Blog> selectByAuthor(String author);
 
     List<Blog> selectAll();
+
+    // dangerous function, should be avoid in prod env
+    void truncateTableForTest();
 }
