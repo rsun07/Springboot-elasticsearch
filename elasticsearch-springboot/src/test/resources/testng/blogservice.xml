@@ -3,7 +3,7 @@
 <suite name="Blog Service Test">
     <test name="Blog Service CURD test">
         <classes>
-            <class name="pers.xiaoming.elasticsearch_springboot.BlogServiceTest"/>
+            <class name="pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest"/>
         </classes>
     </test>
 </suite>

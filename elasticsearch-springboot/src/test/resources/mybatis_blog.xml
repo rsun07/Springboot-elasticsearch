@@ -28,4 +28,7 @@
         <result column="created_at" property="createdAt"/>
     </resultMap>
 
+    <delete id="truncateTableForTest">
+        truncate table blog
+    </delete>
 </mapper>

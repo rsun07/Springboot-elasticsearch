@@ -1,4 +1,4 @@
-package pers.xiaoming.elasticsearch_springboot;
+package pers.xiaoming.elasticsearch_springboot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -7,8 +7,8 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pers.xiaoming.elasticsearch_springboot.Main;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
-import pers.xiaoming.elasticsearch_springboot.service.BlogService;
 
 // BUG:
 // test directory not shares resources folder with the main dir

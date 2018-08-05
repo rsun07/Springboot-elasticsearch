@@ -7,6 +7,8 @@ import pers.xiaoming.elasticsearch_springboot.model.Blog;
 import java.util.List;
 
 public interface SearchService {
+    void refreshRepository();
+
     Blog searchByTitle(String title);
 
     List<Blog> searchByAuthor(String author);

@@ -26,8 +26,6 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public Blog searchByTitle(String title) {
-        refreshRepository();
-
         Optional<Blog> result = repository.findById(title);
 
         return result.orElse(null);
@@ -46,12 +44,11 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public Page<Blog> searchByAuthor(String author, PageRequest page) {
-        refreshRepository();
-
         return repository.findByAuthor(author, page);
     }
 
-    private void refreshRepository() {
+    // in prod, can schedule to refresh, for example, every day or every 3 hours
+    public void refreshRepository() {
         List<Blog> blogs = blogDao.selectAll();
         repository.deleteAll();
         repository.saveAll(blogs);
