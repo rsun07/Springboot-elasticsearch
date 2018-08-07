@@ -3,7 +3,7 @@ package pers.xiaoming.springboot.jersey_jetty.dao;
 import org.springframework.stereotype.Repository;
 import pers.xiaoming.springboot.jersey_jetty.entity.Student;
 
-@Repository("IStudentDao")
+@Repository
 public interface IStudentDao {
     int create(Student student);
 
