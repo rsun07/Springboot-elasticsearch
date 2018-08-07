@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Elastic Search Test" duration-ms="1327" started-at="2018-08-07T01:01:47Z" finished-at="2018-08-07T01:01:49Z">
+    <groups>
+    </groups>
+    <test name="Initial Database" duration-ms="1327" started-at="2018-08-07T01:01:47Z" finished-at="2018-08-07T01:01:49Z">
+      <class name="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="8" started-at="2018-08-06T18:01:47Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-08-06T18:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="setup" is-config="true" duration-ms="918" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthor()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByAuthor()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByAuthor" duration-ms="94" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByAuthor -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthor()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorNot()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByAuthorNot()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByAuthorNot" duration-ms="121" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByAuthorNot -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorNot()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorWithPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByAuthorWithPage()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByAuthorWithPage" duration-ms="21" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByAuthorWithPage -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorWithPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorWithPageLimit1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByAuthorWithPageLimit1()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByAuthorWithPageLimit1" duration-ms="6" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByAuthorWithPageLimit1 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorWithPageLimit1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorWithPageStartFromPageTwo()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByAuthorWithPageStartFromPageTwo()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByAuthorWithPageStartFromPageTwo" duration-ms="6" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByAuthorWithPageStartFromPageTwo -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuthorWithPageStartFromPageTwo()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByContent()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByContent()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByContent" duration-ms="55" started-at="2018-08-06T18:01:48Z" finished-at="2018-08-06T18:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByContent -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitle()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByContent()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="testSearchByTitle()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByTitle" duration-ms="18" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByTitle -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitle()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitleContains()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByTitleContains()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByTitleContains" duration-ms="41" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByTitleContains -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitleContains()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitleContainsAndAuthor()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testSearchByTitleContainsAndAuthor()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="testSearchByTitleContainsAndAuthor" duration-ms="20" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByTitleContainsAndAuthor -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitleContainsAndAuthor()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest@5d534f5d]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:49Z" finished-at="2018-08-06T18:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest -->
+    </test> <!-- Initial Database -->
+  </suite> <!-- Elastic Search Test -->
+  <suite name="Blog Service Test" duration-ms="7436" started-at="2018-08-07T01:01:40Z" finished-at="2018-08-07T01:01:47Z">
+    <groups>
+    </groups>
+    <test name="Blog Service CURD test" duration-ms="7436" started-at="2018-08-07T01:01:40Z" finished-at="2018-08-07T01:01:47Z">
+      <class name="pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="9" started-at="2018-08-06T18:01:40Z" finished-at="2018-08-06T18:01:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="7324" started-at="2018-08-06T18:01:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-08-06T18:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="createStudent()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="createStudent" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createStudent -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest.testCURD()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testCURD()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="testCURD" duration-ms="93" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCURD -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest.testCURD()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest@47e2e487]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-08-06T18:01:47Z" finished-at="2018-08-06T18:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest -->
+    </test> <!-- Blog Service CURD test -->
+  </suite> <!-- Blog Service Test -->
+</testng-results>

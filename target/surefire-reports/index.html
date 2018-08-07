@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">2 suites</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Elastic_Search_Test">
+              <span class="suite-name border-passed">Elastic Search Test</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Elastic_Search_Test">
+                    <span>esservice.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Elastic_Search_Test">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Elastic_Search_Test">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Elastic_Search_Test">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Elastic_Search_Test">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Elastic_Search_Test">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Elastic_Search_Test">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">9 methods,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Elastic_Search_Test" class="hide-methods passed suite-Elastic_Search_Test"> (hide)</a> <!-- hide-methods passed suite-Elastic_Search_Test -->
+                      <a href="#" panel-name="suite-Elastic_Search_Test" class="show-methods passed suite-Elastic_Search_Test"> (show)</a> <!-- show-methods passed suite-Elastic_Search_Test -->
+                    </span>
+                    <div class="method-list-content passed suite-Elastic_Search_Test">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByAuthor">testSearchByAuthor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByAuthorNot">testSearchByAuthorNot</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByAuthorWithPage">testSearchByAuthorWithPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByAuthorWithPageLimit1">testSearchByAuthorWithPageLimit1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByAuthorWithPageStartFromPageTwo">testSearchByAuthorWithPageStartFromPageTwo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByContent">testSearchByContent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByTitle">testSearchByTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByTitleContains">testSearchByTitleContains</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Elastic_Search_Test" title="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest" hash-for-method="testSearchByTitleContainsAndAuthor">testSearchByTitleContainsAndAuthor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Elastic_Search_Test -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Blog_Service_Test">
+              <span class="suite-name border-passed">Blog Service Test</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Blog_Service_Test">
+                    <span>blogservice.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Blog_Service_Test">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Blog_Service_Test">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Blog_Service_Test">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Blog_Service_Test">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Blog_Service_Test">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Blog_Service_Test">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Blog_Service_Test" class="hide-methods passed suite-Blog_Service_Test"> (hide)</a> <!-- hide-methods passed suite-Blog_Service_Test -->
+                      <a href="#" panel-name="suite-Blog_Service_Test" class="show-methods passed suite-Blog_Service_Test"> (show)</a> <!-- show-methods passed suite-Blog_Service_Test -->
+                    </span>
+                    <div class="method-list-content passed suite-Blog_Service_Test">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Blog_Service_Test" title="pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest" hash-for-method="testCURD">testCURD</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Blog_Service_Test -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Elastic_Search_Test" class="panel Elastic_Search_Test">
+          <div class="suite-Elastic_Search_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByAuthor">
+                  </a> <!-- testSearchByAuthor -->
+                  <span class="method-name">testSearchByAuthor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByAuthorNot">
+                  </a> <!-- testSearchByAuthorNot -->
+                  <span class="method-name">testSearchByAuthorNot</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByAuthorWithPage">
+                  </a> <!-- testSearchByAuthorWithPage -->
+                  <span class="method-name">testSearchByAuthorWithPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByAuthorWithPageLimit1">
+                  </a> <!-- testSearchByAuthorWithPageLimit1 -->
+                  <span class="method-name">testSearchByAuthorWithPageLimit1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByAuthorWithPageStartFromPageTwo">
+                  </a> <!-- testSearchByAuthorWithPageStartFromPageTwo -->
+                  <span class="method-name">testSearchByAuthorWithPageStartFromPageTwo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByContent">
+                  </a> <!-- testSearchByContent -->
+                  <span class="method-name">testSearchByContent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByTitle">
+                  </a> <!-- testSearchByTitle -->
+                  <span class="method-name">testSearchByTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByTitleContains">
+                  </a> <!-- testSearchByTitleContains -->
+                  <span class="method-name">testSearchByTitleContains</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchByTitleContainsAndAuthor">
+                  </a> <!-- testSearchByTitleContainsAndAuthor -->
+                  <span class="method-name">testSearchByTitleContainsAndAuthor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Elastic_Search_Test-class-passed -->
+        </div> <!-- panel Elastic_Search_Test -->
+        <div panel-name="suite-Blog_Service_Test" class="panel Blog_Service_Test">
+          <div class="suite-Blog_Service_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCURD">
+                  </a> <!-- testCURD -->
+                  <span class="method-name">testCURD</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Blog_Service_Test-class-passed -->
+        </div> <!-- panel Blog_Service_Test -->
+        <div panel-name="test-xml-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/xiaoming.sun/Courses/Springboot-elasticsearch/src/test/resources/testng/esservice.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;Elastic Search Test&quot;&gt;
+  &lt;test name=&quot;Initial Database&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Initial Database --&gt;
+&lt;/suite&gt; &lt;!-- Elastic Search Test --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/xiaoming.sun/Courses/Springboot-elasticsearch/src/test/resources/testng/blogservice.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;Blog Service Test&quot;&gt;
+  &lt;test name=&quot;Blog Service CURD test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Blog Service CURD test --&gt;
+&lt;/suite&gt; &lt;!-- Blog Service Test --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Elastic Search Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Initial Database (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Blog Service Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Blog Service CURD test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Elastic Search Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Blog Service Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Elastic Search Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Elastic_Search_Test');
+function tableData_Elastic_Search_Test() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(9);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testSearchByAuthorNot')
+data.setCell(0, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(0, 3, 121);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testSearchByAuthor')
+data.setCell(1, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(1, 3, 94);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testSearchByContent')
+data.setCell(2, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(2, 3, 55);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSearchByTitleContains')
+data.setCell(3, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(3, 3, 41);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testSearchByAuthorWithPage')
+data.setCell(4, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(4, 3, 21);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testSearchByTitleContainsAndAuthor')
+data.setCell(5, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(5, 3, 20);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testSearchByTitle')
+data.setCell(6, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(6, 3, 18);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testSearchByAuthorWithPageStartFromPageTwo')
+data.setCell(7, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(7, 3, 6);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testSearchByAuthorWithPageLimit1')
+data.setCell(8, 2, 'pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest')
+data.setCell(8, 3, 6);
+window.suiteTableData['Elastic_Search_Test']= { tableData: data, tableDiv: 'times-div-Elastic_Search_Test'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 382 ms</span>
+              <div id="times-div-Elastic_Search_Test">
+              </div> <!-- times-div-Elastic_Search_Test -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Blog Service Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Blog_Service_Test');
+function tableData_Blog_Service_Test() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testCURD')
+data.setCell(0, 2, 'pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest')
+data.setCell(0, 3, 93);
+window.suiteTableData['Blog_Service_Test']= { tableData: data, tableDiv: 'times-div-Blog_Service_Test'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 93 ms</span>
+              <div id="times-div-Blog_Service_Test">
+              </div> <!-- times-div-Blog_Service_Test -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Elastic Search Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Blog Service Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Elastic_Search_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextBeforeTestClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextPrepareTestInstance</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">createStudent</span>
+                <span class="method-start">7333 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest.testCURD())</span>
+                <span class="method-start">7335 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCURD</span>
+                <span class="method-start">7337 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest.testCURD())</span>
+                <span class="method-start">7430 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">springTestContextAfterTestClass</span>
+                <span class="method-start">7431 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextBeforeTestClass</span>
+                <span class="method-start">7441 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextPrepareTestInstance</span>
+                <span class="method-start">7442 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">7450 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8368 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthor</span>
+                <span class="method-start">8370 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8464 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8465 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorNot</span>
+                <span class="method-start">8466 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8587 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8588 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorWithPage</span>
+                <span class="method-start">8589 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8610 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8610 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorWithPageLimit1</span>
+                <span class="method-start">8611 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8617 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8618 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorWithPageStartFromPageTwo</span>
+                <span class="method-start">8619 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8625 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByCont...)</span>
+                <span class="method-start">8626 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByContent</span>
+                <span class="method-start">8627 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByCont...)</span>
+                <span class="method-start">8682 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8682 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByTitle</span>
+                <span class="method-start">8684 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8702 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8703 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByTitleContains</span>
+                <span class="method-start">8704 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8745 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8746 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByTitleContainsAndAuthor</span>
+                <span class="method-start">8747 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8767 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">springTestContextAfterTestClass</span>
+                <span class="method-start">8768 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Blog_Service_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextBeforeTestClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextPrepareTestInstance</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">createStudent</span>
+                <span class="method-start">7333 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest.testCURD())</span>
+                <span class="method-start">7335 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCURD</span>
+                <span class="method-start">7337 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.BlogServiceTest.testCURD())</span>
+                <span class="method-start">7430 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">springTestContextAfterTestClass</span>
+                <span class="method-start">7431 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextBeforeTestClass</span>
+                <span class="method-start">7441 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextPrepareTestInstance</span>
+                <span class="method-start">7442 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">7450 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8368 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthor</span>
+                <span class="method-start">8370 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8464 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8465 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorNot</span>
+                <span class="method-start">8466 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8587 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8588 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorWithPage</span>
+                <span class="method-start">8589 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8610 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8610 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorWithPageLimit1</span>
+                <span class="method-start">8611 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8617 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8618 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByAuthorWithPageStartFromPageTwo</span>
+                <span class="method-start">8619 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByAuth...)</span>
+                <span class="method-start">8625 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByCont...)</span>
+                <span class="method-start">8626 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByContent</span>
+                <span class="method-start">8627 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByCont...)</span>
+                <span class="method-start">8682 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8682 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByTitle</span>
+                <span class="method-start">8684 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8702 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8703 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByTitleContains</span>
+                <span class="method-start">8704 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8745 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8746 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchByTitleContainsAndAuthor</span>
+                <span class="method-start">8747 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest.testSearchByTitl...)</span>
+                <span class="method-start">8767 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">springTestContextAfterTestClass</span>
+                <span class="method-start">8768 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
