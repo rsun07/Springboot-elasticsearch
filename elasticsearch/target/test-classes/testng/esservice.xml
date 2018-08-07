@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Elastic Search Test">
-    <test name="Initial Database">
-        <classes>
-            <class name="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest"/>
-        </classes>
-    </test>
-</suite>
