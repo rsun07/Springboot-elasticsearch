@@ -2,6 +2,7 @@ package pers.xiaoming.springboot.jersey_jetty.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 import pers.xiaoming.springboot.jersey_jetty.service.IStudentService;
 import pers.xiaoming.springboot.jersey_jetty.entity.Student;
 import pers.xiaoming.springboot.jersey_jetty.exception.BadRequestException;
@@ -16,7 +17,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Component
+@RestController
 @Path("/student")
 public class StudentResource {
 

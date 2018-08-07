@@ -5,14 +5,10 @@ import org.springframework.stereotype.Service;
 import pers.xiaoming.springboot.jersey_jetty.dao.IStudentDao;
 import pers.xiaoming.springboot.jersey_jetty.entity.Student;
 
-@Service("studentService")
+@Service
 public class StudentServiceImpl implements IStudentService {
-    private IStudentDao dao;
-
     @Autowired
-    public StudentServiceImpl(IStudentDao dao) {
-        this.dao = dao;
-    }
+    private IStudentDao dao;
 
     public Student createStudent(Student student) {
         int id = dao.create(student);

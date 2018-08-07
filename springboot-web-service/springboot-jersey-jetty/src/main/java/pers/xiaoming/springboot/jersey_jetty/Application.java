@@ -1,15 +1,15 @@
 package pers.xiaoming.springboot.jersey_jetty;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.PropertySource;
 
 // @Configuration
 // @ComponentScan("pers.xiaoming.springboot.ssm")
-@PropertySource(value="classpath:jdbc.properties")
 @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan
+@MapperScan("pers.xiaoming.springboot.jersey_jetty.dao")
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
