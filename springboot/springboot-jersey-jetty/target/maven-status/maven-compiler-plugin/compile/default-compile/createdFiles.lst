@@ -1,0 +1,9 @@
+pers/xiaoming/springboot/jersey_jetty/Application.class
+pers/xiaoming/springboot/jersey_jetty/dao/IStudentDao.class
+pers/xiaoming/springboot/jersey_jetty/service/IStudentService.class
+pers/xiaoming/springboot/jersey_jetty/api/StudentResource.class
+pers/xiaoming/springboot/jersey_jetty/entity/Student.class
+pers/xiaoming/springboot/jersey_jetty/exception/BadRequestException.class
+pers/xiaoming/springboot/jersey_jetty/exception/exceptionmapper/BadRequestExceptionMapper.class
+pers/xiaoming/springboot/jersey_jetty/service/StudentServiceImpl.class
+pers/xiaoming/springboot/jersey_jetty/api/JerseyConfig.class
