@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("pers.xiaoming.elasticsearch_springboot.dao")
-public class Main {
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

@@ -9,15 +9,14 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pers.xiaoming.elasticsearch_springboot.Main;
+import pers.xiaoming.elasticsearch_springboot.Application;
 import pers.xiaoming.elasticsearch_springboot.dao.IBlogDao;
-import pers.xiaoming.elasticsearch_springboot.service.DBInitForES;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@SpringBootTest(classes = Main.class)
+@SpringBootTest(classes = Application.class)
 @Slf4j
 public class ElasticSearchServiceTest extends AbstractTestNGSpringContextTests {
 

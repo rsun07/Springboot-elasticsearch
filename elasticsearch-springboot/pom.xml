@@ -18,7 +18,7 @@
 
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <shade.version>2.3</shade.version>
-        <main.class.name>pers.xiaoming.elasticsearch_springboot.Main</main.class.name>
+        <main.class.name>pers.xiaoming.elasticsearch_springboot.Application</main.class.name>
     </properties>
 
     <dependencies>

@@ -7,7 +7,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pers.xiaoming.elasticsearch_springboot.Main;
+import pers.xiaoming.elasticsearch_springboot.Application;
 import pers.xiaoming.elasticsearch_springboot.model.Blog;
 
 // BUG:
@@ -15,7 +15,7 @@ import pers.xiaoming.elasticsearch_springboot.model.Blog;
 // After copy paste the resources dir, test get passed
 // Before it cannot find mybatis_blog.xml
 
-@SpringBootTest(classes = Main.class)
+@SpringBootTest(classes = Application.class)
 public class BlogServiceTest extends AbstractTestNGSpringContextTests {
     @Autowired
     @Qualifier("blogService")
