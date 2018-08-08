@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pers.xiaoming.springboot.ssm.entity.Student;
@@ -36,15 +37,15 @@ public class StudentController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<String> getStudent(int id) {
+    @RequestMapping(value = "/id/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Student> getStudent(@PathVariable("id") int id) {
         Student student = service.getStudent(id);
 
-        return new ResponseEntity<>(student.toString(), HttpStatus.OK);
+        return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<Boolean> deleteStudent(int id) {
+    @RequestMapping(value = "/id/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Boolean> deleteStudent(@PathVariable("id") int id) {
         boolean del = service.deleteStudent(id);
 
         return new ResponseEntity<>(del, HttpStatus.OK);
