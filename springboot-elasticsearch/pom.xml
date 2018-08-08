@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>pers.xiaoming.elasticsearch_springboot</groupId>
-    <artifactId>elasticsearch_springboot</artifactId>
-    <version>1.0-SNAPSHOT</version>
+
+    <groupId>pers.xiaoming.springboot</groupId>
+    <artifactId>springboot-elasticsearch</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -17,7 +20,7 @@
         <testng.version>6.8</testng.version>
 
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
-        <main.class.name>pers.xiaoming.elasticsearch_springboot.Application</main.class.name>
+        <main.class.name>pers.xiaoming.springboot.elasticsearch.Application</main.class.name>
     </properties>
 
     <dependencies>
@@ -103,16 +106,16 @@
 
             <!-- Test plugin to execute the testng tests -->
             <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-surefire-plugin</artifactId>-->
-                <!--<version>2.21.0</version>-->
-                <!--<configuration>-->
-                    <!--&lt;!&ndash; Suite testng xml file to consider for test execution &ndash;&gt;-->
-                    <!--<suiteXmlFiles>-->
-                        <!--<suiteXmlFile>src/test/resources/testng/blogservice.xml</suiteXmlFile>-->
-                        <!--<suiteXmlFile>src/test/resources/testng/esservice.xml</suiteXmlFile>-->
-                    <!--</suiteXmlFiles>-->
-                <!--</configuration>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-surefire-plugin</artifactId>-->
+            <!--<version>2.21.0</version>-->
+            <!--<configuration>-->
+            <!--&lt;!&ndash; Suite testng xml file to consider for test execution &ndash;&gt;-->
+            <!--<suiteXmlFiles>-->
+            <!--<suiteXmlFile>src/test/resources/testng/blogservice.xml</suiteXmlFile>-->
+            <!--<suiteXmlFile>src/test/resources/testng/esservice.xml</suiteXmlFile>-->
+            <!--</suiteXmlFiles>-->
+            <!--</configuration>-->
             <!--</plugin>-->
         </plugins>
     </build>

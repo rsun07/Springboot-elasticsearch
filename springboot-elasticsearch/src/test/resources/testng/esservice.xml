@@ -3,7 +3,7 @@
 <suite name="Elastic Search Test">
     <test name="Initial Database">
         <classes>
-            <class name="pers.xiaoming.elasticsearch_springboot.service.ElasticSearchServiceTest"/>
+            <class name="pers.xiaoming.springboot.elasticsearch.service.ElasticSearchServiceTest"/>
         </classes>
     </test>
 </suite>
