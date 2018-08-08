@@ -11,8 +11,8 @@
   </parent>
 
   <artifactId>ssm-springboot</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <properties>
       <main.class.name>pers.xiaoming.springboot.ssm.Application</main.class.name>

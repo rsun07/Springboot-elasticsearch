@@ -8,7 +8,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>springboot-web-service</module>
+        <module>ssm-springboot</module>
+        <module>ssm-springboot-client</module>
+        <module>springboot-jersey-jetty</module>
         <module>springboot-elasticsearch</module>
     </modules>
 
