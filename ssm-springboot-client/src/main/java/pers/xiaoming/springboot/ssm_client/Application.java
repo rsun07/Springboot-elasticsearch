@@ -1,4 +1,4 @@
-package pers.xiaoming.springboot.ssm;
+package pers.xiaoming.springboot.ssm_client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

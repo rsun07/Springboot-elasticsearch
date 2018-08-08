@@ -16,7 +16,7 @@
   <properties>
       <spring.boot.version>1.5.10.RELEASE</spring.boot.version>
 
-      <main.class.name>pers.xiaoming.springboot.ssm_client.Application</main.class.name>
+      <main.class.name>pers.xiaoming.springboot.ssm.Application</main.class.name>
   </properties>
 
   <dependencies>
@@ -24,7 +24,7 @@
       <dependency>
           <groupId>pers.xiaoming.springboot</groupId>
           <artifactId>ssm-springboot</artifactId>
-          <version>1.0.0-SNAPSHOT</version>
+          <version>${project.version}</version>
       </dependency>
 
       <dependency>
@@ -47,7 +47,7 @@
           <scope>test</scope>
       </dependency>
 
-    <!--<dependency>-->
+      <!--<dependency>-->
       <!--<groupId>com.fasterxml.jackson.core</groupId>-->
       <!--<artifactId>jackson-databind</artifactId>-->
       <!--<version>2.9.5</version>-->

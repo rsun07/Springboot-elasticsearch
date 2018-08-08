@@ -1,4 +1,4 @@
-package pers.xiaoming.springboot.ssm.controller;
+package pers.xiaoming.springboot.ssm_client.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +26,7 @@ public class StudentClientController {
         return restTemplate.postForObject(SERVICE_ENDPOINT + SERVICE_PATH, student, Student.class);
     }
 
-    @RequestMapping
+    @RequestMapping("id/{id}")
     @GetMapping
     public Student get(@PathVariable("id") int id) {
         return restTemplate.getForObject(SERVICE_ENDPOINT + SERVICE_PATH, Student.class);
