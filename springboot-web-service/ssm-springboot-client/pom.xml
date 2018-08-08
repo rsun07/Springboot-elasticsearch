@@ -5,22 +5,25 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.10.RELEASE</version>
+      <groupId>pers.xiaoming.springboot</groupId>
+      <artifactId>springboot</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>ssm-springboot-client</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-    <properties>
-        <main.class.name>pers.xiaoming.springboot.ssm_client.Application</main.class.name>
-    </properties>
+  <properties>
+      <spring.boot.version>1.5.10.RELEASE</spring.boot.version>
+
+      <main.class.name>pers.xiaoming.springboot.ssm_client.Application</main.class.name>
+  </properties>
 
   <dependencies>
       <!--Add dependency for modules defines in producer/service-->
       <dependency>
-          <groupId>org.springframework.boot</groupId>
+          <groupId>pers.xiaoming.springboot</groupId>
           <artifactId>ssm-springboot</artifactId>
           <version>1.0-SNAPSHOT</version>
       </dependency>
@@ -28,12 +31,13 @@
       <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-web</artifactId>
-          <!--Don't need to specify Spring framework version because it's already specify in parent-->
+          <version>${spring.boot.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-test</artifactId>
+          <version>${spring.boot.version}</version>
           <scope>test</scope>
       </dependency>
 
@@ -72,6 +76,7 @@
           <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
+              <version>${spring.boot.version}</version>
               <configuration>
                   <fork>true</fork>
                   <mainClass>${main.class.name}</mainClass>
