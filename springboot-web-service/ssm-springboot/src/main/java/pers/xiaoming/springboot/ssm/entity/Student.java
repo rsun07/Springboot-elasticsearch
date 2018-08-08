@@ -1,14 +1,25 @@
 package pers.xiaoming.springboot.ssm.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Student implements Serializable {
+    @JsonProperty
     private int id;
+
+    @JsonProperty
     private String name;
+
+    @JsonProperty
     private double score;
 
     public Student() {
+    }
+
+    public Student(String name) {
+        this.name = name;
     }
 
     public Student(String name, double score) {

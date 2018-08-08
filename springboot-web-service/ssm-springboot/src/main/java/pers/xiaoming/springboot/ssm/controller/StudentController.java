@@ -3,14 +3,14 @@ package pers.xiaoming.springboot.ssm.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import pers.xiaoming.springboot.ssm.entity.Student;
 import pers.xiaoming.springboot.ssm.service.IStudentService;
 
-@Controller
+@RestController
 @RequestMapping("/student")
 public class StudentController {
     private IStudentService service;
@@ -21,17 +21,14 @@ public class StudentController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<String> createStudent(String name, double score) {
-        Student student = new Student(name, score);
+    public ResponseEntity<Student> createStudent(Student student) {
         service.createStudent(student);
 
-        return new ResponseEntity<>(student.toString(), HttpStatus.OK);
+        return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
-    public ResponseEntity<Void> updateStudent(String name, double score) {
-
-        Student student = new Student(name, score);
+    public ResponseEntity<Void> updateStudent(Student student) {
         service.updateStudent(student);
 
         return new ResponseEntity<>(HttpStatus.OK);
